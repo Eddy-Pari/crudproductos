@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Editar Producto</title>
+</head>
+<body>
+    <h1>Editar Producto</h1>
+    <form action="{{ url_for('update', id=producto['id']) }}" method="post">
+        <label for="descripcion">Descripción:</label>
+        <input type="text" name="descripcion" value="{{ producto['descripcion'] }}" required>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" name="cantidad" value="{{ producto['cantidad'] }}" required>
+        <label for="precio">Precio:</label>
+        <input type="number" name="precio" step="0.01" value="{{ producto['precio'] }}" required>
+        <button type="submit">Guardar Cambios</button>
+    </form>
+</body>
+</html>
